@@ -6,7 +6,9 @@ RUN apk add --no-cache \
  postfix \
  unzip \
  libc6-compat \
- curl 
+ curl \
+ tzdata \
+ sed
 
 RUN mkdir /tmp/pkg \
  && cd /tmp/pkg \
