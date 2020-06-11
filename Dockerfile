@@ -20,6 +20,8 @@ RUN cd /tmp/pkg \
  && wget https://downloads.anaplan.com/add-ins/connect/anaplan-connect-1.4.4.zip \
  && cd /usr/local/ && unzip /tmp/pkg/anaplan-connect-1.4.4.zip
 
+RUN /bin/ln -s /usr/share/zoneinfo/Asia/Singapore /etc/localtime
+RUN rm -f /etc/crontabs/root && /bin/ln -s /anaplan/config/schedule-jobs /etc/crontabs/root
 RUN rm -rf /tmp/pkg
 
 CMD ["/anaplan/scripts/entrypoint.sh"]
