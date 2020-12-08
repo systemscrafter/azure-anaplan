@@ -8,6 +8,7 @@ RUN apk add --no-cache \
  libc6-compat \
  curl \
  tzdata \
+ dateutils \
  sed
 
 RUN mkdir /tmp/pkg \
