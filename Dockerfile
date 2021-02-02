@@ -26,3 +26,5 @@ RUN rm -f /etc/crontabs/root && /bin/ln -s /anaplan/config/scheduled-jobs /etc/c
 RUN rm -rf /tmp/pkg
 
 ENTRYPOINT ["/anaplan/scripts/entrypoint.sh"]
+
+CMD ["postfix", "start-fg"]
