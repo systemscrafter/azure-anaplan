@@ -25,4 +25,4 @@ RUN /bin/ln -s /usr/share/zoneinfo/Asia/Singapore /etc/localtime
 RUN rm -f /etc/crontabs/root && /bin/ln -s /anaplan/config/scheduled-jobs /etc/crontabs/root
 RUN rm -rf /tmp/pkg
 
-CMD ["/anaplan/scripts/entrypoint.sh"]
+ENTRYPOINT ["/anaplan/scripts/entrypoint.sh"]
