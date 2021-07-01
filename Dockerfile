@@ -19,7 +19,9 @@ RUN mkdir /tmp/pkg \
 
 RUN cd /tmp/pkg \
  && wget https://downloads.anaplan.com/add-ins/connect/anaplan-connect-2.0.0.zip \
- && cd /usr/local/ && unzip /tmp/pkg/anaplan-connect-2.0.0.zip
+ && mkdir /usr/local/anaplan-connect \
+ && cd /usr/local/anaplan-connect \
+ && unzip /tmp/pkg/anaplan-connect-2.0.0.zip
 
 RUN /bin/ln -s /usr/share/zoneinfo/Asia/Singapore /etc/localtime
 RUN rm -f /etc/crontabs/root && /bin/ln -s /anaplan/config/scheduled-jobs /etc/crontabs/root
