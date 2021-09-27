@@ -18,7 +18,7 @@ RUN mkdir /tmp/pkg \
  && cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
 
 RUN cd /tmp/pkg \
- && wget https://downloads.anaplan.com/add-ins/connect/anaplan-connect-2.0.0.zip \
+ && wget https://downloads.anaplan.com/add-ins/connect/anaplan-connect-2.1.0.zip \
  && mkdir /usr/local/anaplan-connect \
  && cd /usr/local/anaplan-connect \
  && unzip /tmp/pkg/anaplan-connect-2.0.0.zip
